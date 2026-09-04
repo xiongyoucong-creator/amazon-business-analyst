@@ -421,7 +421,7 @@ FBA 配送费独增 <b>$8,098</b>，吞掉增量的 <b>32%</b>。
 <span class="c" style="color:var(--up)">+10.2%</span></span></div>
   </div></div>
  <div class="cd nb"><div class="ct">毛利环比归因瀑布</div>
-  <div class="cs">6月 $12,271 → 7月 $14,198</div>
+  <div class="cs">7月 $12,271 → 8月 $14,198</div>
   <div id="c8" class="ch tall"></div>
   <div class="nt">销售额增长贡献 <b>$25,632</b>，被成本增长全部抵消。
   <b>FBA配送费 -$8,098</b> 是最大拖累，占销售额增量 <b>32%</b>。</div></div>
@@ -538,12 +538,12 @@ FBA 配送费独增 <b>$8,098</b>，吞掉增量的 <b>32%</b>。
 <div class="k"><div class="kl">广告费</div><div class="kv">$32,776</div><div class="kd up"><span class="ar">▲</span>$3,517 <span class="pc">(+12.0%)</span></div></div>
 </div>
 <div class="hl crit">
-FBA 配送费占销售额 <b>42.8%</b>（6月 44.0%），单件 <b>$5.18</b>，
+FBA 配送费占销售额 <b>42.8%</b>（7月 44.0%），单件 <b>$5.18</b>，
 而单件采购成本仅 <b>$1.75</b>——配送费是货值的 <b>3.0 倍</b>。
 液体日化自重大、体积占位高，在 <b>$12.11</b> 客单价下无法摊薄，属结构性问题。
 </div>
 <div class="row c3">
- <div class="cd nb"><div class="ct">单件成本拆解 · 7月 vs 6月</div><div class="cs">各成本项摊到每件（$/件）</div>
+ <div class="cd nb"><div class="ct">单件成本拆解 · 8月 vs 7月</div><div class="cs">各成本项摊到每件（$/件）</div>
   <div id="c16" class="ch"></div></div>
  <div class="cd nb"><div class="ct">周趋势 · 成本结构堆叠</div><div class="cs">各周成本绝对额</div>
   <div id="c17" class="ch"></div></div>
@@ -655,7 +655,7 @@ FBA 配送费占销售额 <b>42.8%</b>（6月 44.0%），单件 <b>$5.18</b>，
 <div style="font-size:9.5px;color:var(--mut);padding-top:12px;border-top:1px solid var(--line);
  display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px">
  <span>数据源 领星ERP · 毛利口径=平台收入−平台支出−自有成本(采购+头程) · 库存货值=人民币(含头程均摊) · 已校验误差 $0.00</span>
- <span>生成 2026-09-04 12:30</span>
+ <span>生成 2026-09-04 13:16</span>
 </div>
 </div>
 <div class="toast" id="toast"></div>
@@ -980,7 +980,7 @@ function expXlsx(){
   XLSX.utils.book_append_sheet(wb,XLSX.utils.json_to_sheet(rows),nm.slice(0,31));
  });
  // 3) KPI 汇总
- const kv=[['指标','7月','6月','环比%']];
+ const kv=[['指标','8月','7月','环比%']];
  [['销售额','sales'],['销量','qty'],['客单价','aov'],['毛利润','gross'],['毛利率%','gross_margin'],
   ['广告费','ad_cost'],['广告销售额','ad_sales'],['ACOS%','acos'],['TACOS%','tacos'],
   ['FBA配送费','fba_fee'],['FBA单件','fba_per_unit'],['平台佣金','plat_fee'],['采购成本','cogs'],
@@ -1214,14 +1214,14 @@ mk('c1',{grid:{...G,right:56,left:16,top:52,bottom:34},animation:false,
 
 (()=>{const d=D.unitCost;
  mk('c16',{grid:{...G,left:44,right:26},animation:false,
-  tooltip:{trigger:'axis',formatter:p=>p[0].name+'<br/>7月 <b>$'+p[0].value.toFixed(2)+'</b>/件<br/>6月 $'+p[1].value.toFixed(2)+'/件'},
-  legend:{...LG,data:['7月','6月']},
+  tooltip:{trigger:'axis',formatter:p=>p[0].name+'<br/>8月 <b>$'+p[0].value.toFixed(2)+'</b>/件<br/>7月 $'+p[1].value.toFixed(2)+'/件'},
+  legend:{...LG,data:['8月','7月']},
   xAxis:{type:'value',axisLabel:{...AX,formatter:v=>'$'+v},splitLine:SL},
   yAxis:{type:'category',data:d.map(x=>x[0]),axisLabel:AX,axisTick:{show:false},axisLine:{lineStyle:{color:'#e5e6eb'}}},
-  series:[{name:'7月',type:'bar',barWidth:'34%',data:d.map((x,i)=>({value:+x[1].toFixed(2),
+  series:[{name:'8月',type:'bar',barWidth:'34%',data:d.map((x,i)=>({value:+x[1].toFixed(2),
     itemStyle:{color:i===0?CS[1]:CS[0],borderRadius:[0,1,1,0]}})),
     label:{show:true,position:'right',fontSize:8.5,color:'#4e5969',formatter:p=>'$'+p.value.toFixed(2)}},
-   {name:'6月',type:'bar',barWidth:'34%',itemStyle:{color:'#c9cdd4',borderRadius:[0,1,1,0]},
+   {name:'7月',type:'bar',barWidth:'34%',itemStyle:{color:'#c9cdd4',borderRadius:[0,1,1,0]},
     data:d.map(x=>+x[2].toFixed(2))}]});
 })();
 
