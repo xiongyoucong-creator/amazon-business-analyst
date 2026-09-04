@@ -334,7 +334,7 @@ FBA 配送费独增 <b>$8,098</b>，吞掉增量的 <b>32%</b>。
 </div>
 <div class="cd"><div class="ct">SKU 销售明细</div><div class="cs">点击表头排序 · 导出为筛选后的全部行，非页面显示行数</div>
  <div class="fb" data-t="sales">
-  <div class="fi"><label>显示</label><input type="number" data-p="limit" value="20" min="1" max="99999"><label>行</label><label class="all"><input type="checkbox" data-p="showAll"> 全部</label></div>
+  <div class="fi"><label>显示</label><input type="number" data-p="limit" value="50" min="1" max="99999"><label>行</label><label class="all"><input type="checkbox" data-p="showAll"> 全部</label></div>
   <div class="fi"><label>销售额≥$</label><input type="number" data-p="minSales" value="0" min="0"></div>
   <div class="fi"><label>销量≥</label><input type="number" data-p="minQty" value="0" min="0"></div>
   <div class="fi"><label>毛利率</label><select data-p="mgn">
@@ -370,7 +370,7 @@ FBA 配送费独增 <b>$8,098</b>，吞掉增量的 <b>32%</b>。
 </div>
 <div class="cd"><div class="ct">亏损 SKU 明细</div><div class="cs">按毛利升序 · FBA单件=该SKU单位配送费</div>
  <div class="fb" data-t="loss">
-  <div class="fi"><label>显示</label><input type="number" data-p="limit" value="20" min="1" max="99999"><label>行</label><label class="all"><input type="checkbox" data-p="showAll"> 全部</label></div>
+  <div class="fi"><label>显示</label><input type="number" data-p="limit" value="50" min="1" max="99999"><label>行</label><label class="all"><input type="checkbox" data-p="showAll"> 全部</label></div>
   <div class="fi"><label>亏损≥$</label><input type="number" data-p="minLoss" value="0" min="0"></div>
   <div class="fi"><label>销量≥</label><input type="number" data-p="minQty" value="0" min="0"></div>
   <div class="fi"><label>排序</label><select data-p="sort">
@@ -428,7 +428,7 @@ FBA 配送费独增 <b>$8,098</b>，吞掉增量的 <b>32%</b>。
 </div>
 <div class="cd"><div class="ct">SKU 环比变化明细</div><div class="cs">正=增长 负=下滑 · 可切换排序方向</div>
  <div class="fb" data-t="mom">
-  <div class="fi"><label>显示</label><input type="number" data-p="limit" value="20" min="1" max="99999"><label>行</label><label class="all"><input type="checkbox" data-p="showAll"> 全部</label></div>
+  <div class="fi"><label>显示</label><input type="number" data-p="limit" value="50" min="1" max="99999"><label>行</label><label class="all"><input type="checkbox" data-p="showAll"> 全部</label></div>
   <div class="fi"><label>基数≥$</label><input type="number" data-p="minBase" value="500" min="0"></div>
   <div class="fi"><label>方向</label><select data-p="dir">
    <option value="up">增长榜</option><option value="down">下滑榜</option><option value="all">全部</option></select></div>
@@ -465,7 +465,7 @@ FBA 配送费独增 <b>$8,098</b>，吞掉增量的 <b>32%</b>。
 <div class="cd" style="margin-top:11px"><div class="ct">ASIN 流量明细</div>
  <div class="cs">会话数≥门槛的 ASIN · 可按转化率升降序找优化目标或标杆</div>
  <div class="fb" data-t="traf">
-  <div class="fi"><label>显示</label><input type="number" data-p="limit" value="20" min="1" max="99999"><label>行</label><label class="all"><input type="checkbox" data-p="showAll"> 全部</label></div>
+  <div class="fi"><label>显示</label><input type="number" data-p="limit" value="50" min="1" max="99999"><label>行</label><label class="all"><input type="checkbox" data-p="showAll"> 全部</label></div>
   <div class="fi"><label>会话≥</label><input type="number" data-p="minSess" value="200" min="0"></div>
   <div class="fi"><label>转化率</label><input type="number" data-p="cvrMin" value="0" min="0" step="0.5"><label>~</label>
    <input type="number" data-p="cvrMax" value="100" min="0" step="0.5"><label>%</label></div>
@@ -508,7 +508,7 @@ FBA 配送费独增 <b>$8,098</b>，吞掉增量的 <b>32%</b>。
 <div class="cd"><div class="ct">广告活动明细</div>
  <div class="cs">用 ACOS 区间 + 花费门槛筛出待关停 / 待加投的活动</div>
  <div class="fb" data-t="camp">
-  <div class="fi"><label>显示</label><input type="number" data-p="limit" value="20" min="1" max="99999"><label>行</label><label class="all"><input type="checkbox" data-p="showAll"> 全部</label></div>
+  <div class="fi"><label>显示</label><input type="number" data-p="limit" value="50" min="1" max="99999"><label>行</label><label class="all"><input type="checkbox" data-p="showAll"> 全部</label></div>
   <div class="fi"><label>花费≥$</label><input type="number" data-p="minSpend" value="0" min="0"></div>
   <div class="fi"><label>ACOS</label><input type="number" data-p="acosMin" value="0" min="0">
    <label>~</label><input type="number" data-p="acosMax" value="999" min="0"><label>%</label></div>
@@ -578,7 +578,7 @@ FBA 配送费占销售额 <b>42.8%</b>（6月 44.0%），单件 <b>$5.18</b>，
 <div class="cd" style="margin-top:11px"><div class="ct">库存明细</div>
 <div class="cs">断货看可售天数·滞销看180天+库龄 · 货值=采购成本，头程按当月均摊</div>
  <div class="fb" data-t="stock">
-  <div class="fi"><label>显示</label><input type="number" data-p="limit" value="20" min="1" max="99999"><label>行</label><label class="all"><input type="checkbox" data-p="showAll"> 全部</label></div>
+  <div class="fi"><label>显示</label><input type="number" data-p="limit" value="50" min="1" max="99999"><label>行</label><label class="all"><input type="checkbox" data-p="showAll"> 全部</label></div>
   <div class="fi"><label>可售天数</label><input type="number" data-p="dosMin" value="0" min="0">
    <label>~</label><input type="number" data-p="dosMax" value="30" min="0"><label>天</label></div>
   <div class="fi"><label>可售量≥</label><input type="number" data-p="minAvail" value="1" min="0"></div>
@@ -654,7 +654,7 @@ FBA 配送费占销售额 <b>42.8%</b>（6月 44.0%），单件 <b>$5.18</b>，
 <div style="font-size:9.5px;color:var(--mut);padding-top:12px;border-top:1px solid var(--line);
  display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px">
  <span>数据源 领星ERP · 毛利口径=平台收入−平台支出−自有成本(采购+头程) · 已校验误差 $0.00</span>
- <span>生成 2026-09-04 11:13</span>
+ <span>生成 2026-09-04 11:29</span>
 </div>
 </div>
 <div class="toast" id="toast"></div>
