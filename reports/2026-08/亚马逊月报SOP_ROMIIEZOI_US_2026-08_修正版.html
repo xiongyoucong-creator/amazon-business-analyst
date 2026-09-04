@@ -770,12 +770,13 @@ const DEF = {
    ['可售天数','n',r=>{if(!r.dos)return '–';const c=r.dos<15?'crit':(r.dos<30?'warn':'');
     return c?`<span class="pl ${c}">${r.dos.toFixed(0)}天</span>`:r.dos.toFixed(0)+'天';},'dos'],
    ['在途','n',r=>nn(r.inbound),'inbound'],
-   ['库龄180+','n',r=>r.dos&&r.dos>180?`<span class="neg">${nn(r.avail)}件</span>`:'—','dos'],
-   ['库龄365+','n',r=>r.dos&&r.dos>365?`<span class="neg">${nn(r.avail)}件</span>`:'—','dos'],
+   ['库龄180+','n',r=>r.a180>0?`<span class="neg">${nn(r.a180)}件</span>`:'—','a180'],
+   ['库龄365+','n',r=>r.a365>0?`<span class="neg">${nn(r.a365)}件</span>`:'—','a365'],
+   ['库龄180+占比','n',r=>{const p=r.a180&&r.avail?(r.a180/r.avail*100):0;return p>0?`<span class="neg">${p.toFixed(1)}%</span>`:'—';},'a180'],
    ['占压货值','n',r=>$(r.value),'value']],
   flt:(rows,p)=>rows.filter(r=>{
    if(p.preset==='out') return r.avail>0 && r.dos>0 && r.dos<30;
-   if(p.preset==='over') return r.dos>180 && r.avail>0;
+   if(p.preset==='over') return r.a180>0;
    return r.dos>=p.dosMin && r.dos<=p.dosMax && r.avail>=p.minAvail && r.value>=p.minValue;}),
   srt:(rows,p)=>p.sort==='dos_asc'?rows.sort((a,b)=>a.dos-b.dos)
    :p.sort==='dos_desc'?rows.sort((a,b)=>b.dos-a.dos)
@@ -1274,9 +1275,9 @@ Object.keys(DEF).forEach(t=>render(t));
  document.getElementById('lossN').textContent=loss.length;
  document.getElementById('lossV').textContent='合计 '+$(loss.reduce((a,b)=>a+b.gross,0));
  const out=R.stock.filter(r=>r.avail>0&&r.dos>0&&r.dos<30);
- const over=R.stock.filter(r=>r.dos>180&&r.avail>0);
+ const over=R.stock.filter(r=>r.a180>0);
  const ov=over.reduce((a,b)=>a+b.value,0);
- const oq=over.reduce((a,b)=>a+(b.avail||0),0);
+ const oq=over.reduce((a,b)=>a+(b.a180||0),0);
  document.getElementById('outN').textContent=out.length;
  document.getElementById('outT').textContent='可售<30天';
  document.getElementById('overV').textContent=$(ov);
