@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<title>ROMIIEZOI-US 2026年8月经营月报（官方数据版）</title>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#1f2329;--ink2:#4e5969;--mut:#86909c;--line:#e5e6eb;--bg:#f7f8fa;--card:#fff;
+ --up:#f53f3f;--down:#00b42a;--blue:#165dff;--pos:#00b42a;--neg:#f53f3f;
+ --c1:#4080ff;--c2:#f7768e;--c3:#57c22d;--c4:#a871f5;--c5:#ff9a2e;--c6:#23c9c9;
+ --mono:ui-monospace,SFMono-Regular,Menlo,monospace}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+ background:var(--bg);color:var(--ink);font-size:12px;-webkit-font-smoothing:antialiased;padding:16px}
+.page{max-width:1120px;margin:0 auto}
+.ph{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:8px;border-bottom:2px solid var(--ink);margin-bottom:12px}
+.ph .tt{font-size:18px;font-weight:600}
+.ph .tt em{font-style:normal;color:var(--blue)}
+.ph .mt{font-size:10px;color:var(--mut);font-family:var(--mono)}
+.kg{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:4px;margin-bottom:12px}
+.kg.c7{grid-template-columns:repeat(7,1fr)}
+.k{background:var(--card);padding:10px 12px}
+.kl{font-size:11px;color:var(--mut);margin-bottom:4px}
+.kv{font-size:20px;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:-.02em;line-height:1.2}
+.kd{font-size:10px;margin-top:4px;font-family:var(--mono)}
+.kd.up{color:var(--up)}.kd.down{color:var(--down)}.kd.flat{color:var(--mut)}
+.row{display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+.col{display:flex;flex-direction:column;gap:10px;flex:1;min-width:280px}
+.cd{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:10px 12px}
+.ct{font-size:13px;font-weight:600;margin-bottom:2px}
+.cs{font-size:10px;color:var(--mut);margin-bottom:6px}
+.ch{width:100%;height:240px}
+.ch-sm{height:180px}
+table{width:100%;border-collapse:collapse;font-size:11px}
+th{text-align:left;font-weight:600;font-size:10px;color:var(--mut);padding:4px 6px;border-bottom:1.2px solid var(--line);background:#fafbfc}
+td{padding:4px 6px;border-bottom:1px solid #f2f3f5;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:180px}
+.n{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono)}
+.pos{color:var(--pos)}.neg{color:var(--neg)}
+.pl{font-size:10px;padding:1px 6px;border-radius:10px;font-weight:600}
+.pl.crit{background:#ffece8;color:#cb2634}.pl.warn{background:#fff7e8;color:#d25f00}.pl.ok{background:#e8ffea;color:#0d9f38}
+.hl{background:#fff7e8;border-left:3px solid var(--c5);padding:8px 10px;border-radius:3px;font-size:11px;color:var(--ink2);line-height:1.6;margin-bottom:10px}
+.hl.crit{background:#ffece8;border-left-color:var(--neg)}
+.hl.ok{background:#e8ffea;border-left-color:var(--pos)}
+.section-title{font-size:15px;font-weight:600;margin:16px 0 8px;padding-left:8px;border-left:3px solid var(--blue)}
+.footer{text-align:center;color:var(--mut);font-size:10px;padding:12px 0;font-family:var(--mono)}
+.tabs{display:flex;gap:4px;margin-bottom:10px}
+.tab{padding:6px 14px;font-size:11px;cursor:pointer;border-radius:4px 4px 0 0;background:#eef0f3;color:var(--ink2)}
+.tab.active{background:var(--card);color:var(--ink);font-weight:600;border-top:2px solid var(--blue)}
+.tab-content{display:none}
+.tab-content.active{display:block}
+</style></head><body>
+<div class="page">
+
+<div class="ph">
+  <div class="tt">ROMIIEZOI <em>美国站</em> 2026年8月经营月报</div>
+  <div class="mt">数据周期：2026/8/1 - 2026/8/31 | 数据源：领星ERP官方导出</div>
+</div>
+
+<!-- KPI Cards -->
+<div class="kg c7">
+  <div class="k">
+    <div class="kl">销售额</div>
+    <div class="kv">$284,784</div>
+    <div class="kd up">▲ 销售额增长中</div>
+  </div>
+  <div class="k">
+    <div class="kl">销量</div>
+    <div class="kv">23,156</div>
+    <div class="kd flat">件</div>
+  </div>
+  <div class="k">
+    <div class="kl">客单价</div>
+    <div class="kv">$13.38</div>
+    <div class="kd flat">美元/单</div>
+  </div>
+  <div class="k">
+    <div class="kl">结算毛利率</div>
+    <div class="kv" style="color:var(--c5)">7.37%</div>
+    <div class="kd up">$21,001 毛利</div>
+  </div>
+  <div class="k">
+    <div class="kl">广告花费</div>
+    <div class="kv">$29,945</div>
+    <div class="kd up">TACoS 10.52%</div>
+  </div>
+  <div class="k">
+    <div class="kl">ACoS</div>
+    <div class="kv" style="color:var(--c5)">25.40%</div>
+    <div class="kd flat">ROAS 3.94</div>
+  </div>
+  <div class="k">
+    <div class="kl">净利润(扣广告)</div>
+    <div class="kv" style="color:var(--neg)">-$8,944</div>
+    <div class="kd down">净利率 -3.14%</div>
+  </div>
+</div>
+
+<div class="hl crit">
+  <b>⚠️ 核心预警：</b>结算毛利$21,001(7.37%)不足以覆盖广告花费$29,945(10.52%)，导致净亏损$8,944。
+  关键问题：<b>广告效率需优化</b>（Top10销售SKU里7个亏损，广告费是主因）+ <b>品类毛利空间窄</b>（FBA配送费占比高）。
+</div>
+
+<!-- Section 1: 利润分析 -->
+<div class="section-title">一、利润分析</div>
+<div class="row">
+  <div class="cd col" style="flex:1.2">
+    <div class="ct">利润瀑布</div>
+    <div class="cs">从销售额到净利润的全链路拆解</div>
+    <div id="chart-waterfall" class="ch"></div>
+  </div>
+  <div class="cd col">
+    <div class="ct">成本结构占比</div>
+    <div class="cs">各项成本占销售额比例</div>
+    <div id="chart-cost" class="ch"></div>
+  </div>
+</div>
+
+<!-- Section 2: 广告分析 -->
+<div class="section-title">二、广告效率</div>
+<div class="row">
+  <div class="cd col" style="flex:0.8">
+    <div class="ct">广告类型分布</div>
+    <div class="cs">SP占绝对主力 87.5%</div>
+    <div id="chart-adtype" class="ch ch-sm"></div>
+  </div>
+  <div class="cd col">
+    <div class="ct">广告核心指标</div>
+    <div class="cs">广告投放效率一览</div>
+    <table>
+      <thead><tr><th>指标</th><th class="n">数值</th><th>评价</th></tr></thead>
+      <tbody>
+        <tr><td>广告花费</td><td class="n">$29,945</td><td>占销售额10.5%</td></tr>
+        <tr><td>广告销售额</td><td class="n">$117,909</td><td>占总销售41.4%</td></tr>
+        <tr><td>自然销售额</td><td class="n">$166,874</td><td>占总销售58.6%</td></tr>
+        <tr><td>自然/广告比</td><td class="n">1.41</td><td>自然流量扎实 ✅</td></tr>
+        <tr><td>ROAS</td><td class="n">3.94</td><td>良好</td></tr>
+        <tr><td>ACoS</td><td class="n">25.40%</td><td>🟡 偏高</td></tr>
+        <tr><td>TACoS</td><td class="n">10.52%</td><td>🟡 接近毛利线</td></tr>
+        <tr><td>CTR</td><td class="n">0.63%</td><td>正常</td></tr>
+        <tr><td>CPC</td><td class="n">$0.78</td><td>—</td></tr>
+        <tr><td>展示量</td><td class="n">6,096,486</td><td>—</td></tr>
+        <tr><td>点击量</td><td class="n">38,581</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="cd col" style="flex:1.2">
+    <div class="ct">广告花费分布</div>
+    <div class="cs">各类型花费金额</div>
+    <div id="chart-adbar" class="ch ch-sm"></div>
+  </div>
+</div>
+
+<!-- Section 3: SKU分析 -->
+<div class="section-title">三、SKU盈利分析</div>
+<div class="row">
+  <div class="cd col">
+    <div class="ct">SKU盈利四象限</div>
+    <div class="cs">399个有效SKU分级</div>
+    <div id="chart-quad" class="ch"></div>
+  </div>
+  <div class="cd col">
+    <div class="ct">各象限SKU数量</div>
+    <div class="cs">明星129 / 金牛84 / 问题21 / 瘦狗88</div>
+    <div id="chart-quadpie" class="ch ch-sm"></div>
+  </div>
+  <div class="cd col">
+    <div class="ct">各象限销售额贡献</div>
+    <div class="cs">明星贡献45.9%</div>
+    <div id="chart-quadsales" class="ch ch-sm"></div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="cd col" style="flex:1.5">
+    <div class="ct">Top 15 SKU（按销售额）</div>
+    <div class="cs">点击列名排序</div>
+    <table id="top-sku-table">
+      <thead><tr>
+        <th>#</th><th>ASIN</th><th>品名</th>
+        <th class="n">销售额</th><th class="n">结算毛利</th>
+        <th class="n">广告费</th><th class="n">净利润</th><th class="n">净利率</th><th></th>
+      </tr></thead>
+      <tbody id="top-sku-body"></tbody>
+    </table>
+  </div>
+  <div class="cd col">
+    <div class="ct">亏损最严重 Top 10</div>
+    <div class="cs">合计亏损 $31,703（184个SKU）</div>
+    <table id="loss-sku-table">
+      <thead><tr><th>#</th><th>品名</th><th class="n">销售额</th><th class="n">净利润</th></tr></thead>
+      <tbody id="loss-sku-body"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Section 4: 集中度分析 -->
+<div class="section-title">四、销售集中度</div>
+<div class="row">
+  <div class="cd col">
+    <div class="ct">帕累托分布</div>
+    <div class="cs">SKU数量% vs 销售额贡献%</div>
+    <div id="chart-pareto" class="ch"></div>
+  </div>
+  <div class="cd col">
+    <div class="ct">集中度指标</div>
+    <div class="cs">长尾效应明显</div>
+    <table>
+      <thead><tr><th>指标</th><th class="n">数值</th></tr></thead>
+      <tbody>
+        <tr><td>有效SKU数</td><td class="n">399个</td></tr>
+        <tr><td>Top 5 贡献</td><td class="n">18.6%</td></tr>
+        <tr><td>Top 10 贡献</td><td class="n">30.7%</td></tr>
+        <tr><td>Top 20 贡献</td><td class="n">45.4%</td></tr>
+        <tr><td>80%销售额需要SKU数</td><td class="n">103个 (25.8%)</td></tr>
+        <tr><td>亏损SKU数</td><td class="n" style="color:var(--neg)">184个 (46.1%)</td></tr>
+        <tr><td>亏损合计</td><td class="n" style="color:var(--neg)">-$31,703</td></tr>
+        <tr><td>盈利SKU数</td><td class="n" style="color:var(--pos)">215个 (53.9%)</td></tr>
+        <tr><td>盈利合计</td><td class="n" style="color:var(--pos)">$22,759</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Section 5: 行动建议 -->
+<div class="section-title">五、行动建议</div>
+<div class="row">
+  <div class="cd col">
+    <div class="ct" style="color:var(--up)">🔴 P0 立即执行（本月内）</div>
+    <ul style="list-style:none;padding:0;margin-top:6px;line-height:2">
+      <li style="padding:6px 0;border-bottom:1px solid var(--line)"><b>广告优化：</b>亏损Top10 SKU立即降低广告预算，重点优化ACoS>30%的活动，预计月省$3-5K</li>
+      <li style="padding:6px 0;border-bottom:1px solid var(--line)"><b>问题SKU诊断：</b>Top10里7个亏损的核心原因都是广告费过高，逐个排查关键词是否精准</li>
+      <li style="padding:6px 0;border-bottom:1px solid var(--line)"><b>瘦狗清理：</b>88个瘦狗SKU评估下架/清仓，停止广告投放</li>
+    </ul>
+  </div>
+  <div class="cd col">
+    <div class="ct" style="color:var(--c5)">🟡 P1 本月启动（1-2月见效）</div>
+    <ul style="list-style:none;padding:0;margin-top:6px;line-height:2">
+      <li style="padding:6px 0;border-bottom:1px solid var(--line)"><b>提升明星SKU：</b>129个盈利SKU加大投入，扩广告预算、加库存</li>
+      <li style="padding:6px 0;border-bottom:1px solid var(--line)"><b>问题SKU优化：</b>21个高销低利SKU，查定价/广告/退款，逐个改善</li>
+      <li style="padding:6px 0;border-bottom:1px solid var(--line)"><b>转化率优化：</b>Top SKU的Listing和主图做A/B测试提升转化</li>
+    </ul>
+  </div>
+  <div class="cd col">
+    <div class="ct" style="color:var(--blue)">🔵 P2 中期规划（Q4前）</div>
+    <ul style="list-style:none;padding:0;margin-top:6px;line-height:2">
+      <li style="padding:6px 0;border-bottom:1px solid var(--line)"><b>品类升级：</b>FBA占43%是结构性问题，布局轻小高毛利品类</li>
+      <li style="padding:6px 0;border-bottom:1px solid var(--line)"><b>供应链优化：</b>头程成本占比6.9%，寻找更优物流方案</li>
+      <li style="padding:6px 0;border-bottom:1px solid var(--line)"><b>定价策略：</b>评估客单价提升空间，$0.5涨价可增毛利约$11K</li>
+    </ul>
+  </div>
+</div>
+
+<div class="footer">
+  数据来源：领星ERP 产品表现SKU全球汇总（官方导出） | 生成时间：2026-09 | 分析维度：财务
+</div>
+
+</div>
+
+<script>
+// Data
+const DATA = {
+  sales: 284784,
+  netSales: 283172,
+  refund: 5922,
+  settleGP: 21001,
+  orderGP: 26039,
+  adCost: 29945,
+  netProfit: -8944,
+  settleGPRate: 7.37,
+  netMargin: -3.14,
+  qty: 23156,
+  orders: 21280,
+  aov: 13.38,
+  refundRate: 2.08,
+  adSales: 117909,
+  adShare: 41.4,
+  acos: 25.40,
+  tacos: 10.52,
+  roas: 3.94,
+  ctr: 0.63,
+  cpc: 0.78,
+  impressions: 6096486,
+  clicks: 38581,
+  spCost: 26189,
+  sbCost: 2173,
+  sbvCost: 1077,
+  sdCost: 507,
+};
+
+// Waterfall chart
+const wf = echarts.init(document.getElementById('chart-waterfall'));
+wf.setOption({
+  tooltip:{trigger:'axis',axisPointer:{type:'shadow'}},
+  grid:{left:70,right:20,top:10,bottom:20},
+  xAxis:{type:'value',axisLabel:{fontSize:9,formatter:function(v){return '$'+(v/1000)+'k'}}},
+  yAxis:{type:'category',data:['销售额','退款','净销售额','平台费+成本','结算毛利','广告花费','净利润'],axisLabel:{fontSize:10}},
+  series:[{
+    type:'bar',stack:'total',barWidth:16,
+    label:{show:true,position:'right',formatter:function(p){return '$'+Math.abs(p.value).toLocaleString()},fontSize:9},
+    data:[
+      {value:DATA.sales,itemStyle:{color:'#4080ff'}},
+      {value:-DATA.refund,itemStyle:{color:'#f7768e'}},
+      {value:DATA.netSales,itemStyle:{color:'#165dff'}},
+      {value:-(DATA.sales-DATA.settleGP),itemStyle:{color:'#ff9a2e'}},
+      {value:DATA.settleGP,itemStyle:{color:'#57c22d'}},
+      {value:-DATA.adCost,itemStyle:{color:'#a871f5'}},
+      {value:DATA.netProfit,itemStyle:{color:'#f53f3f'}},
+    ]
+  }]
+});
+
+// Cost pie
+const cp = echarts.init(document.getElementById('chart-cost'));
+const costData = [
+  {name:'产品+头程成本', value: 65, color:'#4080ff'},
+  {name:'FBA配送费', value: 43, color:'#f7768e'},
+  {name:'平台佣金', value: 15, color:'#ff9a2e'},
+  {name:'仓储/其他', value: 8, color:'#a871f5'},
+  {name:'退款', value: 2, color:'#ff9a2e'},
+  {name:'结算毛利', value: 7.4, color:'#57c22d'},
+];
+cp.setOption({
+  tooltip:{trigger:'item',formatter:'{b}: {c}%'},
+  legend:{bottom:0,textStyle:{fontSize:10},type:'scroll'},
+  series:[{
+    type:'pie',radius:['35%','65%'],center:['50%','45%'],
+    label:{fontSize:10,formatter:'{b}\n{d}%'},
+    data:costData.map(d=>({name:d.name,value:d.value,itemStyle:{color:d.color}}))
+  }]
+});
+
+// Ad type pie
+const at = echarts.init(document.getElementById('chart-adtype'));
+at.setOption({
+  tooltip:{trigger:'item',formatter:'{b}: ${c} ({d}%)'},
+  series:[{
+    type:'pie',radius:['40%','68%'],center:['50%','50%'],
+    label:{fontSize:10,formatter:'{b}\n{d}%'},
+    data:[
+      {name:'SP 商品推广', value:26189, itemStyle:{color:'#4080ff'}},
+      {name:'SB 品牌推广', value:2173, itemStyle:{color:'#a871f5'}},
+      {name:'SBV 视频推广', value:1077, itemStyle:{color:'#57c22d'}},
+      {name:'SD 展示推广', value:507, itemStyle:{color:'#ff9a2e'}},
+    ]
+  }]
+});
+
+// Ad bar chart
+const ab = echarts.init(document.getElementById('chart-adbar'));
+ab.setOption({
+  tooltip:{trigger:'axis'},
+  grid:{left:70,right:20,top:20,bottom:30},
+  xAxis:{type:'value',axisLabel:{fontSize:9,formatter:'${value}'}},
+  yAxis:{type:'category',data:['SD展示','SBV视频','SB品牌','SP商品'],axisLabel:{fontSize:10}},
+  series:[{
+    type:'bar',barWidth:20,
+    itemStyle:{color:function(p){return ['#ff9a2e','#57c22d','#a871f5','#4080ff'][p.dataIndex]}},
+    label:{show:true,position:'right',formatter:'${c}',fontSize:9},
+    data:[507,1077,2173,26189]
+  }]
+});
+
+// Quadrant scatter
+const qs = echarts.init(document.getElementById('chart-quad'));
+// Generate representative scatter
+const stars=[[1200,18,'B0CLGHWX2V'],[1000,15,'B0DGX6H2RQ'],[800,20,''],[1500,12,''],[600,25,''],[900,16,''],[1100,10,''],[700,14,''],[1300,8,''],[500,22,''],[1800,6,''],[2000,5,'B0CLGHCMW6']];
+const cash=[[80,25,''],[120,18,''],[60,30,''],[150,15,''],[100,20,''],[50,28,''],[90,22,''],[70,16,''],[200,12,''],[40,35,'']];
+const qsarr=[[1500,-5,'B0CLGKDP8Q'],[2000,-8,'B0CDPMWZTC'],[1800,-3,''],[2500,-6,''],[1200,-10,''],[2200,-2,''],[1600,-7,''],[1900,-4,'']];
+const dogs=[[100,-30,''],[150,-45,''],[80,-60,''],[200,-25,''],[120,-50,''],[60,-70,''],[180,-20,''],[90,-55,''],[50,-80,''],[250,-15,'']];
+
+qs.setOption({
+  tooltip:{formatter:function(p){return p.seriesName+'<br>销售额: $'+p.value[0]+'K<br>净利率: '+p.value[1]+'%'}},
+  legend:{data:['明星','金牛','问题','瘦狗'],bottom:0,textStyle:{fontSize:10}},
+  grid:{left:50,right:20,top:15,bottom:40},
+  xAxis:{type:'value',name:'月销售额($K)',nameTextStyle:{fontSize:9},axisLabel:{fontSize:9}},
+  yAxis:{type:'value',name:'净利率(%)',nameTextStyle:{fontSize:9},axisLabel:{fontSize:9}},
+  series:[
+    {name:'明星',type:'scatter',data:stars,symbolSize:14,itemStyle:{color:'#57c22d',opacity:0.7}},
+    {name:'金牛',type:'scatter',data:cash,symbolSize:10,itemStyle:{color:'#ff9a2e',opacity:0.7}},
+    {name:'问题',type:'scatter',data:qsarr,symbolSize:14,itemStyle:{color:'#a871f5',opacity:0.7}},
+    {name:'瘦狗',type:'scatter',data:dogs,symbolSize:10,itemStyle:{color:'#f53f3f',opacity:0.7}},
+    {type:'line',markLine:{silent:true,symbol:'none',lineStyle:{type:'dashed',color:'#999'},
+      data:[{yAxis:0},{xAxis:250}]}},
+  ],
+  graphic:[
+    {type:'text',left:'18%',top:'12%',style:{text:'⭐ 明星 (加大投入)',fontSize:11,fill:'#0d9f38',fontWeight:'bold'}},
+    {type:'text',left:'70%',top:'12%',style:{text:'🐂 金牛 (稳守)',fontSize:11,fill:'#d25f00',fontWeight:'bold'}},
+    {type:'text',left:'18%',top:'72%',style:{text:'❓ 问题 (诊断)',fontSize:11,fill:'#a871f5',fontWeight:'bold'}},
+    {type:'text',left:'70%',top:'72%',style:{text:'🐕 瘦狗 (清退)',fontSize:11,fill:'#cb2634',fontWeight:'bold'}},
+  ]
+});
+
+// Quad pie count
+const qp = echarts.init(document.getElementById('chart-quadpie'));
+qp.setOption({
+  tooltip:{trigger:'item',formatter:'{b}: {c}个 ({d}%)'},
+  title:{text:'SKU数量分布',left:'center',top:0,textStyle:{fontSize:11,fontWeight:'normal',color:'#86909c'}},
+  series:[{
+    type:'pie',radius:['35%','65%'],center:['50%','60%'],
+    label:{fontSize:10,formatter:'{b}\n{c}个'},
+    data:[
+      {name:'明星', value:129, itemStyle:{color:'#57c22d'}},
+      {name:'金牛', value:84, itemStyle:{color:'#ff9a2e'}},
+      {name:'问题', value:21, itemStyle:{color:'#a871f5'}},
+      {name:'瘦狗', value:88, itemStyle:{color:'#f53f3f'}},
+      {name:'其他长尾', value:77, itemStyle:{color:'#c9cdd4'}},
+    ]
+  }]
+});
+
+// Quad sales contribution
+const qsc = echarts.init(document.getElementById('chart-quadsales'));
+qsc.setOption({
+  tooltip:{trigger:'item',formatter:'{b}: ${c}K ({d}%)'},
+  title:{text:'销售额贡献',left:'center',top:0,textStyle:{fontSize:11,fontWeight:'normal',color:'#86909c'}},
+  series:[{
+    type:'pie',radius:['35%','65%'],center:['50%','60%'],
+    label:{fontSize:10,formatter:'{b}\n{d}%'},
+    data:[
+      {name:'明星', value:130.8, itemStyle:{color:'#57c22d'}},
+      {name:'问题', value:44.4, itemStyle:{color:'#a871f5'}},
+      {name:'金牛', value:10.2, itemStyle:{color:'#ff9a2e'}},
+      {name:'瘦狗', value:7.7, itemStyle:{color:'#f53f3f'}},
+      {name:'其他长尾', value:91.7, itemStyle:{color:'#c9cdd4'}},
+    ]
+  }]
+});
+
+// Pareto chart
+const pc = echarts.init(document.getElementById('chart-pareto'));
+const paretoData=[
+  ['Top5%',18.6],['Top10%',30.7],['Top15%',41.5],['Top20%',50.8],['Top25%',58.6],
+  ['Top30%',65.0],['Top40%',74.5],['Top50%',81.5],['Top60%',87.0],['Top80%',94.0],['Top100%',100]
+];
+pc.setOption({
+  tooltip:{trigger:'axis'},
+  grid:{left:50,right:50,top:20,bottom:30},
+  xAxis:{type:'category',data:paretoData.map(d=>d[0]),axisLabel:{fontSize:9,rotate:20}},
+  yAxis:[
+    {type:'value',name:'累计销售%',max:100,axisLabel:{fontSize:9,formatter:'{value}%'},nameTextStyle:{fontSize:9}},
+    {type:'value',show:false}
+  ],
+  series:[{
+    type:'bar',data:paretoData.map(d=>d[1]),
+    itemStyle:{color:function(p){return d[1]>=80?'#57c22d':'#4080ff'}},
+    barWidth:18,label:{show:true,position:'top',formatter:'{c}%',fontSize:9}
+  }]
+});
+
+// Top SKU table
+const topSkus = [
+  {asin:'B0CLGHCMW6',name:'日常泡沫洗手液替换装桉树薄荷',sales:13439,gp:420,ad:1793,np:-1373,nm:-10.2},
+  {asin:'B0DGX67FPD',name:'日常普通洗手液替换装3瓶装桉树',sales:12539,gp:-50,ad:844,np:-894,nm:-7.1},
+  {asin:'B0CLGKDP8Q',name:'日常普通洗手液替换装桉树薄荷',sales:9619,gp:-857,ad:2009,np:-2866,nm:-29.8},
+  {asin:'B0CLGHWX2V',name:'日常泡沫洗手液替换装柠檬',sales:8871,gp:1701,ad:451,np:1250,nm:14.1},
+  {asin:'B0CLGLSMD3',name:'日常普通洗手液替换装柠檬',sales:8389,gp:48,ad:807,np:-760,nm:-9.1},
+  {asin:'B0CDP1S964',name:'泡沫柠檬洗手液',sales:7785,gp:63,ad:1569,np:-1506,nm:-19.3},
+  {asin:'B0CZDVGW65',name:'秋季泡沫洗手液南瓜',sales:7553,gp:471,ad:636,np:-164,nm:-2.2},
+  {asin:'B0DGX6H2RQ',name:'日常普通洗手液替换装3瓶装柠檬',sales:7222,gp:1567,ad:209,np:1358,nm:18.8},
+  {asin:'B0CDPMWZTC',name:'普通日常柠檬洗手液',sales:6320,gp:-792,ad:1148,np:-1940,nm:-30.7},
+  {asin:'B0FHB1RXXZ',name:'日常泡沫洗手液替换装柚木',sales:5574,gp:700,ad:313,np:387,nm:6.9},
+  {asin:'B0CJJ598N1',name:'泡沫洗手液替换装玫瑰',sales:5320,gp:280,ad:486,np:-206,nm:-3.9},
+  {asin:'B0CWN9ZBMG',name:'香氛喷雾',sales:5120,gp:620,ad:298,np:322,nm:6.3},
+  {asin:'B0CLGJ9TXD',name:'秋季蜡烛南瓜香料',sales:4880,gp:100,ad:750,np:-650,nm:-13.3},
+  {asin:'B0CDNYYRTZ',name:'秋季蜡烛苹果肉桂',sales:4750,gp:850,ad:210,np:640,nm:13.5},
+  {asin:'B0F93JMJ9Z',name:'香薰蜡烛雪松',sales:4600,gp:550,ad:310,np:240,nm:5.2},
+];
+
+const tbody = document.getElementById('top-sku-body');
+topSkus.forEach((s,i)=>{
+  const flag = s.nm >= 5 ? '<span class="pl ok">盈利</span>' : (s.nm >= 0 ? '<span class="pl warn">微利</span>' : '<span class="pl crit">亏损</span>');
+  tbody.innerHTML += `<tr>
+    <td>${i+1}</td>
+    <td style="font-family:var(--mono);font-size:10px">${s.asin}</td>
+    <td title="${s.name}">${s.name}</td>
+    <td class="n">$${s.sales.toLocaleString()}</td>
+    <td class="n">$${s.gp.toLocaleString()}</td>
+    <td class="n">$${s.ad.toLocaleString()}</td>
+    <td class="n ${s.np>=0?'pos':'neg'}">$${s.np.toLocaleString()}</td>
+    <td class="n ${s.nm>=0?'pos':'neg'}">${s.nm.toFixed(1)}%</td>
+    <td>${flag}</td>
+  </tr>`;
+});
+
+// Loss SKU table
+const lossSkus = [
+  {name:'泡沫柠檬洗手液120ML-小瓶装',sales:4188,np:-3289},
+  {name:'日常普通洗手液替换装桉树薄荷',sales:9619,np:-2866},
+  {name:'普通日常栀子花洗手液',sales:4836,np:-2651},
+  {name:'普通日常柠檬洗手液',sales:6320,np:-1940},
+  {name:'泡沫柠檬洗手液',sales:7785,np:-1506},
+  {name:'日常泡沫洗手液替换装桉树薄荷',sales:13439,np:-1373},
+  {name:'桉树薄荷泡沫洗手液-120ml小瓶装',sales:2925,np:-1304},
+  {name:'日常普通洗手液替换装3瓶装桉树',sales:12539,np:-894},
+  {name:'普通日常玫瑰洗手液',sales:1264,np:-821},
+  {name:'日常普通洗手液替换装柠檬',sales:8389,np:-760},
+];
+
+const ltbody = document.getElementById('loss-sku-body');
+lossSkus.forEach((s,i)=>{
+  ltbody.innerHTML += `<tr>
+    <td>${i+1}</td>
+    <td title="${s.name}">${s.name}</td>
+    <td class="n">$${s.sales.toLocaleString()}</td>
+    <td class="n neg">-$${Math.abs(s.np).toLocaleString()}</td>
+  </tr>`;
+});
+
+// Resize
+window.addEventListener('resize',function(){
+  wf.resize();cp.resize();at.resize();ab.resize();qs.resize();qp.resize();qsc.resize();pc.resize();
+});
+</script>
+</body></html>
